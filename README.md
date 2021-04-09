@@ -57,7 +57,7 @@ Now that we have the lib, the translations, and an HTML element that must be tra
 
 Somewhere, like in a DOM Ready, instanciate polyglotte as so :
 ```javascript
-    p = new Polyglotte({
+var p = new Polyglotte({
     "default": "fr",
     "current": localStorage["plgLocal"],
     "class": "plg",
