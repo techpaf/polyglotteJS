@@ -3,6 +3,8 @@
 
 Polyglotte is a quick and easy way to implement a kind of localisation in web tech based project.
 
+/!\ W.I.P
+
 ## How it work
 
 ### I) Import polyglotte
@@ -47,7 +49,7 @@ It's easy, just add a paragraphe like that :
 <p class="plg" data-key="hello"></p>
 ```
 
-Three things to notice there :
+Notice that :
 * The p tag doesn't have any content
 * The p tag have a class "plg" here (for polyglotte but use the one you wants...)
 * The p tag have a data-key attr with the value that match a translated key from the translations, here "hello" 
@@ -64,3 +66,9 @@ var p = new Polyglotte({
     "translations": translations
 });
 ```
+
+Notice that Polyglotte takes an object of params
+* default -> Default language ISO code
+* current -> The current language stored in the user LS - if undeifned, will use the default language
+* class -> The class you put on the tags that must be translated
+* translations -> The translations object like made in II)
