@@ -9,6 +9,7 @@ var Polyglotte = function(options){
 
 Polyglotte.prototype.setLanguage = function(langKey){
 	this.currentLanguage = langKey;
+	localStorage["plgLocal"] = langKey;
 	this.translate();
 }
 

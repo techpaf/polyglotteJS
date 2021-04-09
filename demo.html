@@ -22,17 +22,17 @@
 			position: absolute;
 			width: 50px;
 			height: 100%;
-			background: #fff;
 			top: 0;
 			text-align: center;
 			padding: 1rem 0;
-			background: #333;
+			background: #ededed;
 		}
 
 		.lang .flag-icon{
 			display: inline-block;
 			margin-bottom: 5px;
 			cursor: pointer;
+			border-radius: 3px;
 		}
 
 		.content{
@@ -55,8 +55,10 @@
 		<span class="flag-icon flag-icon-es" data-lang="es"></span>
 	</div>
 	<div class="content">
-		<p><span class="tm" data-key="hello"></span>.</p>
+		<p><span class="tm" data-key="hello"></span></p>
 		<p><span class="tm" data-key="iam"></span> Polyglotte, <span class="tm" data-key="plugin-desc"></span></p>
+		<p><span class="tm" data-key="instructions"></span></p>
+		<p><span class="tm" data-key="precisions"></span></p>
 	</div>
 
 	<!-- jQuery -->
@@ -77,7 +79,7 @@
 		$(function(){
 			p = new Polyglotte({
 				"default": "fr",
-				"current": localStorage.plgLocal,
+				"current": localStorage["plgLocal"],
 				"class": "tm"
 			});
 
@@ -86,9 +88,7 @@
 
 		function bindEvents(){
 			$('.flag-icon').click(function(e){
-				localStorage["plgLocal"] = $(this).attr("data-lang");
-
-				p.setLanguage(localStorage["plgLocal"]);
+				p.setLanguage($(this).attr("data-lang"));
 				e.preventDefault();
 			});
 		}
