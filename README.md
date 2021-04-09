@@ -69,6 +69,6 @@ var p = new Polyglotte({
 
 Notice that Polyglotte takes an object of params
 * default -> Default language ISO code
-* current -> The current language stored in the user LS - if undeifned, will use the default language
+* current -> The current language stored in the user LS - if undefined, will use the default language
 * class -> The class you put on the tags that must be translated
 * translations -> The translations object like made in II)
