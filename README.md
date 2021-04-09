@@ -56,7 +56,7 @@ Three things to notice there :
 Now that we have the lib, the translations, and an HTML element that must be translated, lets instanciate polyglotte.
 
 Somewhere, like in a DOM Ready, instanciate polyglotte as so :
-    ```javascript
+```javascript
     p = new Polyglotte({
     "default": "fr",
     "current": localStorage["plgLocal"],
