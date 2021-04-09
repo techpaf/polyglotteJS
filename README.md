@@ -1,12 +1,17 @@
 # Polyglotte
 ### A translation management tool
 
-Polyglotte is a quick and easy way to implement a king of localisation in web tech based project.
+Polyglotte is a quick and easy way to implement a kind of localisation in web tech based project.
 
 ## How it work
 
 ### I) The library
-You must import the polyglotte.js file into your webpage
+You must import the polyglotte.js file into your webpage with a script tag
+
+```html
+<script src="path-to-libs/polyglotte.js"></script>
+```
+
 
 ### II) The translations
 Translation are based on two things :
