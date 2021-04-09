@@ -3,6 +3,7 @@ var Polyglotte = function(options){
 	this.defaultLanguage = options.default || "gb";
 	this.currentLanguage = options.current || this.defaultLanguage;
 	this.translatableElementsClass = options.class || "poly";
+	this.translations = options.translations || null;
 
 	this.translate();
 }
@@ -17,6 +18,6 @@ Polyglotte.prototype.translate = function(){
 	var self = this;
 
 	$('.' + this.translatableElementsClass).each(function(){
-		$(this).text( translations[self.currentLanguage][$(this).attr('data-key')]);
+		$(this).text( self.translations[self.currentLanguage][$(this).attr('data-key')]);
 	});
 }
