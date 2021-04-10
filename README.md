@@ -76,5 +76,5 @@ Notice that Polyglotte takes an object of params
 ### You're all set
 Now in JS, if the user wants to change language, when he click on the selectors you have to implement yourself, just do :
 ```javascript
-p.setLanguage('lang'); // Where lang is the new country ISO code to tranlate into
+p.setLanguage('lang'); // Where lang is the new country ISO code to translate into
 ```
