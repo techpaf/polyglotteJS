@@ -72,3 +72,9 @@ Notice that Polyglotte takes an object of params
 * current -> The current language stored in the user LS - if undefined, will use the default language
 * class -> The class you put on the tags that must be translated
 * translations -> The translations object like made in II)
+
+### You're all set
+Now in JS, if the user wants to change language, when he click on the selectors you have to implement yourself, just do :
+```javascript
+p.setLanguage('lang'); // Where lang is the new country ISO code to tranlate into
+```
