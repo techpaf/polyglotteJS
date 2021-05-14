@@ -18,6 +18,6 @@ Polyglotte.prototype.translate = function(){
 	var self = this;
 
 	$('.' + this.translatableElementsClass).each(function(){
-		$(this).text( self.translations[self.currentLanguage][$(this).attr('data-key')]);
+		$(this).html( self.translations[self.currentLanguage][$(this).attr('data-key')]);
 	});
 }
