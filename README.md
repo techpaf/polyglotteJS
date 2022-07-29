@@ -1,4 +1,4 @@
-# Polyglotte
+# 🏳️ Polyglotte
 ### A translation management tool
 
 Polyglotte is a quick and easy way to implement a kind of localisation in web tech based project.
