@@ -18,6 +18,16 @@ Polyglotte.prototype.translate = function(){
 	var self = this;
 
 	$('.' + this.translatableElementsClass).each(function(){
-		$(this).html( self.translations[self.currentLanguage][$(this).attr('data-key')]);
+		var nodeName = $(this)[0]['nodeName'];
+		if(nodeName == "INPUT"){
+			$(this).attr('placeholder', self.translations[self.currentLanguage][$(this).attr('data-key')]);
+		}
+		if(nodeName == "OPTION"){
+			$(this).attr('value', self.translations[self.currentLanguage][$(this).attr('data-key')]);
+			$(this).text(self.translations[self.currentLanguage][$(this).attr('data-key')]);
+		}
+		else{
+			$(this).html( self.translations[self.currentLanguage][$(this).attr('data-key')]);	
+		}		
 	});
 }
